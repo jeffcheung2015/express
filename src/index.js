@@ -1,7 +1,10 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
+
 const port = 8080;
-// bcrypt for
+
+app.use(cors({}));
 
 app.get("/", (req, res) => {
   res.send({
@@ -11,7 +14,7 @@ app.get("/", (req, res) => {
 
 app.get("/user", (req, res) => {
   res.send({
-    user: "Lun",
+    user: "Allen",
   });
 });
 
